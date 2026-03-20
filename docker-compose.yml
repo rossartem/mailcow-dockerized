@@ -7,7 +7,7 @@ services:
         - SKIP_UNBOUND_HEALTHCHECK=${SKIP_UNBOUND_HEALTHCHECK:-n}
       volumes:
         - ./data/hooks/unbound:/hooks:Z
-        - ./data/conf/unbound/unbound.conf:/etc/unbound/unbound.conf:ro,Z
+      # - ./data/conf/unbound/unbound.conf:/etc/unbound/unbound.conf:ro,Z
       restart: always
       tty: true
       networks:
